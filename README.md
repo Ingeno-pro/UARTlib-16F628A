@@ -9,8 +9,8 @@ Put the uartlib.c into the "Source files" folder and the uartlib.h into the "Hea
 ## Use 
 As for use this library, you should import it by put `#include "uartlib.h"` at the begining of your main.c file  
 
-/!\ Warning : You can only use UART on RB1 and RB2, do not give other functions to these pins
-/!\ Warning : The library work with the internal crystal frenquency, if you mind to change the frequency, please edit `_XTAL_FREQ` in uartlib.h
+/!\ Warning : You can only use UART on RB1 and RB2, do not give other functions to these pins  
+/!\ Warning : The library work with the internal crystal frenquency, if you mind to change the frequency, please edit `_XTAL_FREQ` in uartlib.h  
 
 ### Documentation
 The provided library is very easy to use. You have to first Create a `UART` object then initialize it by using `UART_init(&name_of_uart_object){`  
