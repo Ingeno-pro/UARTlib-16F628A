@@ -23,7 +23,7 @@ Here is some information about library's functions
 `uart.write(char c)` : Send a byte UART 
 `uart.send_paquets(char *packets, char length)` : Send multiple bytes by UART
 
-## How to calculate the value to put in set_buad ?
+### How to calculate the value to put in set_buad ?
 
 The value to put in set_baud is callen the SPBRG, it's calculated with the formula below.  
   
