@@ -19,9 +19,9 @@ Here is an example :
 //Example to add
 ```
 Here is some information about library's functions  
-`uart.set_baud(char baud)` : Edit the baud value, the value that you have to put in argument can be calculated with the formula in the next section
-`uart.write(char c)` : Send a byte UART 
-`uart.send_paquets(char *packets, char length)` : Send multiple bytes by UART
+`uart.set_baud(char baud)` : Edit the baud value, the value that you have to put in argument can be calculated with the formula in the next section  
+`uart.write(char c)` : Send a byte UART   
+`uart.send_paquets(char *packets, char length)` : Send multiple bytes by UART  
 
 ### How to calculate the value to put in set_buad ?
 
