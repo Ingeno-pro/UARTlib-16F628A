@@ -25,8 +25,8 @@ Here is some information about library's functions
 
 ## How to calculate the value to put in set_buad ?
 
-The value to put in set_baud is callen the SPBRG, it's calculated with the formula below.
-![image](https://github.com/user-attachments/assets/726b9034-6326-40e9-97b6-61b29b23a28d)
+The value to put in set_baud is callen the SPBRG, it's calculated with the formula below.  
+![image](https://github.com/user-attachments/assets/726b9034-6326-40e9-97b6-61b29b23a28d)  
 
 With FOSC = _XTAL_FREQ
 
