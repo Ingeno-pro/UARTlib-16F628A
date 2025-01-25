@@ -16,7 +16,52 @@ As for use this library, you should import it by put `#include "uartlib.h"` at t
 The provided library is very easy to use. You have to first Create a `UART` object then initialize it by using `UART_init(&name_of_uart_object){`  
 Here is an example :  
 ```
-//Example to add
+/*
+ * File:   main.c
+ * Author: Ign555
+ * Note: Timer incremented every FOSC / 4 ( without prescaler )
+ * Instruction executed every FOSC / 4 
+ * Created on 8 décembre 2024, 19:00
+ */
+
+// CONFIG
+#pragma config FOSC = INTOSCIO  // Oscillator Selection bits (INTOSC oscillator: I/O function on RA6/OSC2/CLKOUT pin, I/O function on RA7/OSC1/CLKIN)
+#pragma config WDTE = OFF       // Watchdog Timer Enable bit (WDT disabled)
+#pragma config PWRTE = OFF      // Power-up Timer Enable bit (PWRT disabled)
+#pragma config MCLRE = OFF      // RA5/MCLR/VPP Pin Function Select bit (RA5/MCLR/VPP pin function is digital input, MCLR internally tied to VDD)
+#pragma config BOREN = OFF      // Brown-out Detect Enable bit (BOD disabled)
+#pragma config LVP = OFF        // Low-Voltage Programming Enable bit (RB4/PGM pin has digital I/O function, HV on MCLR must be used for programming)
+#pragma config CPD = OFF        // Data EE Memory Code Protection bit (Data memory code protection off)
+#pragma config CP = OFF         // Flash Program Memory Code Protection bit (Code protection off)
+
+#define _XTAL_FREQ 4000000
+
+#include <xc.h>
+#include "uart.h"
+
+void main(void) {
+    
+    //Mise de tous les port en sortie 
+    TRISA &= 0x00;
+    TRISB &= 0x00;
+   
+    
+    
+    UART uart;
+    UART_init(&uart);
+
+    PORTA = 0x00;
+    PORTB = 0x00;
+    
+    __delay_ms(50);
+    
+    while(1){
+        uart.write('t');
+        __delay_ms(1000);  
+    }
+    return;
+}
+
 ```
 Here is some information about library's functions  
 `uart.set_baud(char baud)` : Edit the baud value, the value that you have to put in argument can be calculated with the formula in the next section  
