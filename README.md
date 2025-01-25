@@ -16,14 +16,6 @@ As for use this library, you should import it by put `#include "uartlib.h"` at t
 The provided library is very easy to use. You have to first Create a `UART` object then initialize it by using `UART_init(&name_of_uart_object){`  
 Here is an example :  
 ```
-/*
- * File:   main.c
- * Author: Ign555
- * Note: Timer incremented every FOSC / 4 ( without prescaler )
- * Instruction executed every FOSC / 4 
- * Created on 8 décembre 2024, 19:00
- */
-
 // CONFIG
 #pragma config FOSC = INTOSCIO  // Oscillator Selection bits (INTOSC oscillator: I/O function on RA6/OSC2/CLKOUT pin, I/O function on RA7/OSC1/CLKIN)
 #pragma config WDTE = OFF       // Watchdog Timer Enable bit (WDT disabled)
